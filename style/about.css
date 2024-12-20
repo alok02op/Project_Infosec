@@ -55,7 +55,7 @@
     }
     .out_img{
         display: block;
-        margin: 1rem;
+        margin: 0.2rem;
     }
 
 }
@@ -72,7 +72,7 @@
 }
 @media screen and (max-width:500px){
     .about-wrapper{
-        padding: 02.rem;
+        padding: 0.2rem;
         width: 100%;
     }
     .about-container{
