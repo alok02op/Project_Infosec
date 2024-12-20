@@ -73,6 +73,10 @@
 @media screen and (max-width:500px){
     .about-wrapper{
         padding: 02.rem;
+        width: 100%;
+    }
+    .about-container{
+        width: 100%;
     }
     .about-container p,.para{
         padding: 0.2rem;
@@ -80,6 +84,7 @@
     }
     .about-box,.mission-container,.vision-container{
         margin: 0.2rem;
+        width: 100%;
     }
 
 }
