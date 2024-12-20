@@ -190,12 +190,20 @@
         padding: 0.5rem 0.3rem;
     }
     .resource-container-2{
-        width: 100%;
+        min-width: 250px;
+        min-height: 300px;
+        width: 60vw;
         height: 20vh;
         margin: auto;
     }
+    .resource-container-3,.resource-container-4{
+        min-width: 250px;
+        min-height: 300px;
+    }
     .resource-container-5{
-        width: 100%;
+        min-width: 250px;
+        min-height: 300px;
+        width: 60vw;
         margin: 0px;
         margin-bottom: 1rem;
     }
