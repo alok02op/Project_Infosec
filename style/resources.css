@@ -182,11 +182,12 @@
     }
 }
 @media screen and (max-width:500px){
-    .resource-wrapper,.resource-container-1,.resource-container-1 h1{
+    .resource-wrapper,.resource-container-1{
         padding: 0.2rem;
     }
     .resource-container-1 h1{
-        margin-top: 2rem;
+        margin-top: 4rem;
+        padding: 0.5rem 0.3rem;
     }
     .resource-container-2{
         width: 100%;
