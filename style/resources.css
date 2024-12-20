@@ -164,6 +164,7 @@
     }
     .card{
         width: 60vw;
+        margin: auto;
     }
     .title-2{
         font-size: 2rem;
