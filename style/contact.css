@@ -4,6 +4,8 @@
     background: linear-gradient(180deg, #000000 30%, #1E1E1E 67%);
 }
 .contact-content{
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;

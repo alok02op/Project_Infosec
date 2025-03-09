@@ -35,10 +35,9 @@
     justify-content: center;
 }
 .card{
-    min-width: 380px;
-    width: 20%;
+    min-width: 400px;
+    width: 25%;
     height: 350px;
-    background-color: aqua;
 }
 /* ------ */
 .card-1{
@@ -133,8 +132,8 @@
         padding: 0.5rem;
     }
     .card{
-        min-width: 300px;
-        width: 90%;
+        min-width: 280px;
+        width: 45%;
     }
 }
 @media screen and (max-width: 640px){
