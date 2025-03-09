@@ -132,6 +132,10 @@
     .resource-header{
         padding: 0.5rem;
     }
+    .card{
+        min-width: 300px;
+        width: 90%;
+    }
 }
 @media screen and (max-width: 640px){
     .resource-wrapper,.resource-content{
@@ -145,6 +149,10 @@
     }
     .title-6{
         font-size: 1.2rem;
+    }
+    .card{
+        min-width: 300px;
+        width: 90%;
     }
 }
 /* --------------------------------------------------------------------- */
