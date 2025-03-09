@@ -15,21 +15,6 @@ document.addEventListener('click', (event) => {
     }
 });
 
-// Animation after reaching on page
-
-document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    });
-  
-    const animatedSections = document.querySelectorAll(".animate");
-    animatedSections.forEach((section) => observer.observe(section));
-});
-
 function clearForm(form) {
   setTimeout(() => {form.reset();}, 100);
 }
@@ -52,21 +37,72 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Making clicked menu active
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const navLinks = document.querySelectorAll(".nav-link");
+//   const logoContainer = document.querySelector(".logo-container");
+
+//   const handleNavClick = (event) => {
+//       navLinks.forEach(link => link.classList.remove("active"));
+//       event.target.classList.add("active");
+//   };
+
+//   navLinks.forEach(link => {
+//       link.addEventListener("click", handleNavClick);
+//   });
+
+//   logoContainer.addEventListener("click", () => {
+//       navLinks.forEach(link => link.classList.remove("active"));
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
   const logoContainer = document.querySelector(".logo-container");
+  const sections = document.querySelectorAll("section"); 
 
+  // Function to handle the active class on navigation links
   const handleNavClick = (event) => {
-      navLinks.forEach(link => link.classList.remove("active"));
-      event.target.classList.add("active");
+    navLinks.forEach(link => link.classList.remove("active"));
+    event.target.classList.add("active");
   };
 
+  // Function to set active class on the correct nav link based on the section in view
+  const setActiveNavLink = () => {
+    let currentSection = null;
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+        currentSection = section.id;
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").slice(1) === currentSection) {
+        link.classList.add("active");
+      }
+    });
+  };
+
+  // Set active link on page load if a section is in view
+  setActiveNavLink();
+
+  // Listen for scroll events and update the active link
+  window.addEventListener("scroll", setActiveNavLink);
+
+  // Event listeners for navigation link clicks
   navLinks.forEach(link => {
-      link.addEventListener("click", handleNavClick);
+    link.addEventListener("click", handleNavClick);
   });
 
+  // Remove active class from nav links when logo is clicked
   logoContainer.addEventListener("click", () => {
-      navLinks.forEach(link => link.classList.remove("active"));
+    navLinks.forEach(link => link.classList.remove("active"));
   });
 });
+
+
+
 // ----------------------------------------------------------------------------------------

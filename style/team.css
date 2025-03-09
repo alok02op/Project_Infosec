@@ -1,6 +1,5 @@
 /* Team style */
 .team-wrapper{
-    max-width: 1280px;
     margin: 0 auto;
     background: radial-gradient(circle at top right, #222222 20%, #000000 80%);
     padding-top: 1rem;
@@ -36,7 +35,7 @@
 }
 .detail-card a{
     text-decoration: none;
-    color: #0606f0;
+    color: darkgray;
     cursor: pointer;
     transition: transform 0.1s ease;
     transform: scale(1.5);

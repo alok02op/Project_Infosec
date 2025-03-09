@@ -1,6 +1,5 @@
 /* Home style */
 .home-wrapper{
-    max-width: 1280px;
     margin: 0 auto;
     background: url('../assets/images/hero-img.png') no-repeat bottom right;
     background-size: cover; 
